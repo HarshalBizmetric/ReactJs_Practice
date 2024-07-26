@@ -1,16 +1,16 @@
-function Employee(){
+function Employee({empName, empDate}){
 
-    return (<div class="container">
-    <div class="row kg-row">
-        <div class="col-4">
-            Harshal D
+    return (<div className="container">
+    <div className="row kg-row">
+        <div className="col-4">
+            {empName}
         </div>
 
-        <div class="col-3">
-            01/01/2024
+        <div className="col-3">
+            {empDate}
         </div>
-        <div class="col-3">
-        <button type="button" class="btn btn-danger kg-button">delete</button>
+        <div className="col-3">
+        <button type="button" className="btn btn-danger kg-button">delete</button>
         </div>
     </div>
     <br />

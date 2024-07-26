@@ -1,6 +1,6 @@
 function AddEmp() {
     return (
-        <div class="container text-center">
+        <div className="container text-center">
             <div class="row kg-row">
                 <div class="col-4">
                     <input type="text" placeholder="Enter employee name" />
