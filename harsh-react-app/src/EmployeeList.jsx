@@ -1,6 +1,7 @@
 import AppName from "./components/AppName";
 import AddEmp from "./components/AddEmp";
 import Emps from "./components/Emps";
+import EmptyList from "./EmptyList";
 
 //import Employee1 from "./components/Employee1";
 //import Employee2 from "./components/Employee2";
@@ -27,7 +28,7 @@ function EmpList() {
 
 //Using of useState hook to manage the state of the component
 //let [currentValue, changeValue] = useState("Changes will reflect here");
-let textStateArr = useState("Jay shree ram");
+let textStateArr = useState("Jay shree Ram"); //default Value => "Jay shree Ram"
 let textValue = textStateArr[0];
 let setTextValue = textStateArr[1];
 
@@ -76,8 +77,9 @@ const handleAddEmp = (event) => {
 }
 
 //Delete Employee handler Function
-const handleDeleteClick = (emp) => {
-  setHighlightedEmp(emp);
+const handleDeleteEmp = (itemName) => {
+  const newEmpList = empValue.filter(item => item.empName !== itemName);
+  setEmpValue(newEmpList);
 };
 
 
@@ -86,8 +88,9 @@ return (
       <AppName></AppName>
       {/* Passing handler function */}
       <AddEmp handleAddEmp = {handleAddEmp}></AddEmp>
-      <p>{textValue}</p>
-      <Emps emps={empValue} handleDeleteClick={handleDeleteClick} ></Emps>
+      {empValue.length === 0 ? <EmptyList></EmptyList> : ""}
+      
+      <Emps emps={empValue} handleDeleteEmp={handleDeleteEmp} ></Emps>
 
       {/* <div className='emplist'>
         <Employee empName="Yash Agrawal" empDate="01/02/2023"></Employee>

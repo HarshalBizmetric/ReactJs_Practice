@@ -1,6 +1,6 @@
 import Employee from "./Employee";
 
-const Emp = ({ emps }) => {
+const Emp = ({ emps, handleDeleteEmp }) => {
   return (
     <div className="container">
       {emps.map((emp) => (
@@ -9,10 +9,12 @@ const Emp = ({ emps }) => {
           empName={emp.empName}
           empDate={emp.empDate}
           
-          handleDeleteClick={(event) => {
-            console.log(event);
-            console.log(emp.empName, emp.empDate);
-          }}
+          // handleDeleteEmp={(event) => {
+          //   console.log(event);
+          //   console.log(emp.empName, emp.empDate);
+          // }}
+
+          handleDeleteEmp={handleDeleteEmp}
         ></Employee>
       ))}
     </div>

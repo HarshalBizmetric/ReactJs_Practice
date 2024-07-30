@@ -1,4 +1,4 @@
-function Employee({ empName, empDate, isHighlighted, handleDeleteClick }) {
+function Employee({ empName, empDate, handleDeleteEmp }) {
   //Function for handling the event of delete button clicked
   // const handleDeleteClicked = (event) =>{
   //     console.log(event);
@@ -18,7 +18,7 @@ function Employee({ empName, empDate, isHighlighted, handleDeleteClick }) {
             className="btn btn-danger kg-button"
             //Passing handler function
             //onClick={(event) => handleDeleteClicked(event)}
-            onClick={handleDeleteClick}
+            onClick={() => handleDeleteEmp(empName)}
           >
             delete
           </button>
