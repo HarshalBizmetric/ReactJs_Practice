@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p id="data"></p>
+    
+    <script>
+      fetch("https://dummyjson.com/posts")
+        .then((res) => res.json())
+        .then((data) => {
+            //Data In String format
+            let strData = JSON.stringify(data.posts); 
+            console.log(typeof strData);
+
+            //Data In Object format
+            let objData = JSON.parse(strData)
+            console.log(typeof objData)
+
+            let paragraphData = document.getElementById("data").innerText = strData
+        });
+    </script>
+  </body>
+</html>
