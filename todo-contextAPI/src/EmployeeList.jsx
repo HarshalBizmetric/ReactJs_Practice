@@ -3,9 +3,6 @@ import AddEmp from "./components/AddEmp";
 import Emps from "./components/Emps";
 import EmptyList from "./EmptyList";
 
-//import Employee1 from "./components/Employee1";
-//import Employee2 from "./components/Employee2";
-//import Employee from "./components/Employee";
 import "./EmployeeList.css";
 import { useState } from "react";
 import { TodoEmpContext } from "./store/todo-emp-store";

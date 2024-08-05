@@ -28,9 +28,9 @@ function EmpList() {
 
 //Using of useState hook to manage the state of the component
 //let [currentValue, changeValue] = useState("Changes will reflect here");
-let textStateArr = useState("Jay shree Ram"); //default Value => "Jay shree Ram"
-let textValue = textStateArr[0];
-let setTextValue = textStateArr[1];
+//let textStateArr = useState("Jay shree Ram"); //default Value => "Jay shree Ram"
+// let textValue = textStateArr[0];
+// let setTextValue = textStateArr[1];
 
 //other way to write above code
 // let [textValue, setTextValue]  = useState("Jay shree ram");
